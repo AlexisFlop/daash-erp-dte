@@ -1,0 +1,13 @@
+{
+  "solicitudes": 20,
+  "stock_inicial": 5,
+  "aceptadas": 5,
+  "rechazadas_por_stock": 15,
+  "otros_errores": 0,
+  "stock_final": 0,
+  "sobreventa": false,
+  "tiempo_total_s": 4.37,
+  "latencia_mediana_ms": 4362,
+  "latencia_max_ms": 4368
+}
+PASA

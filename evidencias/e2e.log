@@ -1,0 +1,24 @@
+Base de datos reiniciada: 200
+PASA  E2E-01 Credenciales incorrectas muestran error y no inician sesión
+PASA  E2E-02 Bloqueo de cuenta tras 5 intentos fallidos (CA-04)
+PASA  E2E-03 Recuperación de contraseña envía enlace temporal (RF-02)
+PASA  E2E-04 Inicio de sesión de gerente con JWT (RF-01)
+PASA  E2E-05 POS bloqueado sin turno de caja abierto (RF-09)
+PASA  E2E-06 Venta con factura obtiene sello de recepción (RF-10, RF-13) · DTE-01-M001P001-000000000000150
+PASA  E2E-07 Descuento automático de stock y registro en Kardex (RF-07)
+PASA  E2E-08 Venta con CCF a contribuyente (RF-16) · DTE-03-M001P001-000000000000043
+PASA  E2E-09 Venta en contingencia cuando el MH no responde (RF-14) · tipoModelo=2
+PASA  E2E-10 Retransmisión automática al restablecer el servicio · {"pendientes":0,"evento":"TRANSMITIDO"}
+PASA  E2E-11 Nota de crédito sobre CCF devuelve stock (RF-15) · stock 11 → 12
+PASA  E2E-12 Invalidación bloqueada si el CCF tiene notas de crédito vigentes
+PASA  E2E-13 Invalidación de factura con evento transmitido al MH
+PASA  E2E-14 Generación del PDF del DTE con código QR · 2246 KB
+PASA  E2E-15 Corte de caja Z cierra el turno (RF-12) · 2 transacciones (esperadas 2, excluye invalidados)
+PASA  E2E-16 Cajero no ve módulos de administración (RF-04)
+PASA  E2E-17 Acceso directo por URL a un módulo sin permiso es denegado
+PASA  E2E-18 Descuento sobre el límite exige autorización de gerente (RF-11)
+PASA  E2E-19 Token JWT alterado (rol cajero → gerente) es rechazado (CA-02)
+PASA  E2E-21 Las operaciones quedan persistidas en PostgreSQL (visibles para otro usuario tras recargar) · {"total":195,"nc":1,"inv":1}
+PASA  E2E-20 Sin errores de JavaScript ni respuestas 5xx del servidor durante la ejecución
+
+21/21 casos aprobados · latencia de emisión DTE: 1221, 1308 ms

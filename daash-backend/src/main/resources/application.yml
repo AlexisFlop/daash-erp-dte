@@ -1,0 +1,45 @@
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: daash-backend
+  datasource:
+    # La aplicación se conecta con el rol de mínimo privilegio creado por la migración V2
+    url: ${DB_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:daash}?currentSchema=daash}
+    username: ${DB_USER:daash_app}
+    password: ${DB_PASSWORD:app_demo_2026}
+  flyway:
+    # Las migraciones y el reinicio de datos demo usan el dueño de la base de datos
+    user: ${DB_OWNER:postgres}
+    password: ${DB_OWNER_PASSWORD:demo}
+    schemas: daash
+    default-schema: daash
+    create-schemas: true
+    placeholders:
+      appPassword: ${DB_APP_PASSWORD:app_demo_2026}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: daash
+        jdbc.time_zone: UTC
+  jackson:
+    default-property-inclusion: always
+    time-zone: America/El_Salvador
+
+management:
+  endpoints.web.exposure.include: health,info
+
+daash:
+  jwt:
+    secreto: ${JWT_SECRET:daash-devs-clave-hs256-demo-2026-adventure-works-el-salvador}
+    horas: 8
+  seed:
+    habilitado: ${SEED:true}
+  cors:
+    origenes: ${CORS_ORIGINS:http://localhost:5173,http://localhost:4173}

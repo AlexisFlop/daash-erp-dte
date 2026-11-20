@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Paleta del logo Daash */
+  --color-ink: #333333;
+  --color-ink-950: #161616;
+  --color-ink-900: #1f1f1f;
+  --color-ink-800: #2a2a2a;
+  --color-ink-700: #3d3d3d;
+  --color-leaf: #73f16f;
+  --color-leaf-50: #effdee;
+  --color-leaf-100: #dcfbdb;
+  --color-leaf-700: #1f8f1b;
+  --color-sun: #f5e661;
+  --color-sun-50: #fefbe6;
+  --color-sun-100: #fcf6c4;
+  --color-sun-800: #7a6c00;
+  --color-coral: #f54e4e;
+  --color-coral-50: #fef0f0;
+  --color-coral-100: #fddcdc;
+  --color-coral-700: #c42626;
+
+  --color-paper: #f7f7f5;
+  --color-line: #e8e8e4;
+  --color-muted: #77776f;
+
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 16px -4px rgb(0 0 0 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.04), 0 16px 40px -12px rgb(0 0 0 / 0.18);
+
+  --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
+  @keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 0 currentColor; }
+    50% { box-shadow: 0 0 0 5px transparent; }
+  }
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  ::selection {
+    background: var(--color-leaf-100);
+  }
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d4d4cf transparent;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-line bg-white shadow-soft;
+  }
+  .label {
+    @apply mb-1.5 block text-[12px] font-medium tracking-wide text-muted;
+  }
+  .input {
+    @apply h-10 w-full rounded-xl border border-line bg-white px-3 text-sm text-ink transition outline-none placeholder:text-neutral-400 focus:border-ink/40 focus:ring-4 focus:ring-leaf/25 disabled:bg-paper disabled:text-muted;
+  }
+  .input-error {
+    @apply border-coral/60 focus:border-coral focus:ring-coral/15;
+  }
+  .th {
+    @apply px-4 py-3 text-left text-[11px] font-semibold tracking-wider text-muted uppercase;
+  }
+  .td {
+    @apply border-t border-line px-4 py-3 text-sm;
+  }
+  .kbd {
+    @apply rounded-md border border-line bg-paper px-1.5 py-0.5 font-mono text-[10px] text-muted;
+  }
+}
+
+.json-key { color: #333333; font-weight: 500; }
+.json-str { color: #1f8f1b; }
+.json-num { color: #c42626; }
+.json-bool { color: #7a6c00; }
+.json-null { color: #9a9a92; font-style: italic; }

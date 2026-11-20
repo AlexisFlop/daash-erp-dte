@@ -1,0 +1,159 @@
+{
+  "fecha": "2026-11-20T20:31:41.298Z",
+  "total": 21,
+  "pasan": 21,
+  "fallan": 0,
+  "latencia_emision_ms": [
+    1221,
+    1308
+  ],
+  "casos": [
+    {
+      "id": "E2E-01",
+      "nombre": "Credenciales incorrectas muestran error y no inician sesión",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 3094
+    },
+    {
+      "id": "E2E-02",
+      "nombre": "Bloqueo de cuenta tras 5 intentos fallidos (CA-04)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 17983
+    },
+    {
+      "id": "E2E-03",
+      "nombre": "Recuperación de contraseña envía enlace temporal (RF-02)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 2665
+    },
+    {
+      "id": "E2E-04",
+      "nombre": "Inicio de sesión de gerente con JWT (RF-01)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 3030
+    },
+    {
+      "id": "E2E-05",
+      "nombre": "POS bloqueado sin turno de caja abierto (RF-09)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 1318
+    },
+    {
+      "id": "E2E-06",
+      "nombre": "Venta con factura obtiene sello de recepción (RF-10, RF-13)",
+      "resultado": "PASA",
+      "detalle": "DTE-01-M001P001-000000000000150",
+      "ms": 4974
+    },
+    {
+      "id": "E2E-07",
+      "nombre": "Descuento automático de stock y registro en Kardex (RF-07)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 1
+    },
+    {
+      "id": "E2E-08",
+      "nombre": "Venta con CCF a contribuyente (RF-16)",
+      "resultado": "PASA",
+      "detalle": "DTE-03-M001P001-000000000000043",
+      "ms": 4870
+    },
+    {
+      "id": "E2E-09",
+      "nombre": "Venta en contingencia cuando el MH no responde (RF-14)",
+      "resultado": "PASA",
+      "detalle": "tipoModelo=2",
+      "ms": 3591
+    },
+    {
+      "id": "E2E-10",
+      "nombre": "Retransmisión automática al restablecer el servicio",
+      "resultado": "PASA",
+      "detalle": "{\"pendientes\":0,\"evento\":\"TRANSMITIDO\"}",
+      "ms": 9869
+    },
+    {
+      "id": "E2E-11",
+      "nombre": "Nota de crédito sobre CCF devuelve stock (RF-15)",
+      "resultado": "PASA",
+      "detalle": "stock 11 → 12",
+      "ms": 970
+    },
+    {
+      "id": "E2E-12",
+      "nombre": "Invalidación bloqueada si el CCF tiene notas de crédito vigentes",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 10
+    },
+    {
+      "id": "E2E-13",
+      "nombre": "Invalidación de factura con evento transmitido al MH",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 1062
+    },
+    {
+      "id": "E2E-14",
+      "nombre": "Generación del PDF del DTE con código QR",
+      "resultado": "PASA",
+      "detalle": "2246 KB",
+      "ms": 65
+    },
+    {
+      "id": "E2E-15",
+      "nombre": "Corte de caja Z cierra el turno (RF-12)",
+      "resultado": "PASA",
+      "detalle": "2 transacciones (esperadas 2, excluye invalidados)",
+      "ms": 19
+    },
+    {
+      "id": "E2E-16",
+      "nombre": "Cajero no ve módulos de administración (RF-04)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 3012
+    },
+    {
+      "id": "E2E-17",
+      "nombre": "Acceso directo por URL a un módulo sin permiso es denegado",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 1287
+    },
+    {
+      "id": "E2E-18",
+      "nombre": "Descuento sobre el límite exige autorización de gerente (RF-11)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 2364
+    },
+    {
+      "id": "E2E-19",
+      "nombre": "Token JWT alterado (rol cajero → gerente) es rechazado (CA-02)",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 1199
+    },
+    {
+      "id": "E2E-21",
+      "nombre": "Las operaciones quedan persistidas en PostgreSQL (visibles para otro usuario tras recargar)",
+      "resultado": "PASA",
+      "detalle": "{\"total\":195,\"nc\":1,\"inv\":1}",
+      "ms": 3011
+    },
+    {
+      "id": "E2E-20",
+      "nombre": "Sin errores de JavaScript ni respuestas 5xx del servidor durante la ejecución",
+      "resultado": "PASA",
+      "detalle": "",
+      "ms": 0
+    }
+  ]
+}

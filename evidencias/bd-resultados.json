@@ -1,0 +1,62 @@
+{
+  "version": "PostgreSQL 16.15 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+  "tiempo_esquema_s": 0.2,
+  "tiempo_seguridad_s": 0.1,
+  "tiempo_carga_s": 10.3,
+  "volumen": {
+    "dte": "602800",
+    "clientes": "4000",
+    "productos": "1500",
+    "usuarios": "25",
+    "particiones": "12"
+  },
+  "tamano_bd": "438 MB",
+  "antes_indices_ms": {
+    "Q1 Libro de ventas a contribuyentes (1 mes)": 10.91,
+    "Q2 Búsqueda por número de control": 0.11,
+    "Q3 Historial de documentos de un cliente": 20.32,
+    "Q4 Cola de DTE en contingencia": 22.81,
+    "Q5 Búsqueda de producto en POS (prefijo)": 0.2,
+    "Q6 Ventas por día del mes (dashboard)": 9.81,
+    "Q7 Consulta por sello de recepción": 24.22
+  },
+  "tiempo_indices_s": 1.7,
+  "despues_indices_ms": {
+    "Q1 Libro de ventas a contribuyentes (1 mes)": 1.58,
+    "Q2 Búsqueda por número de control": 0.1,
+    "Q3 Historial de documentos de un cliente": 0.41,
+    "Q4 Cola de DTE en contingencia": 0.05,
+    "Q5 Búsqueda de producto en POS (prefijo)": 0.21,
+    "Q6 Ventas por día del mes (dashboard)": 3.94,
+    "Q7 Consulta por sello de recepción": 0.07
+  },
+  "poda_particiones": true,
+  "integridad": [
+    "OK     | IT-01 DUI con dígito verificador erróneo → new row for relation \"cliente\" violates check constraint \"cliente_chec",
+    "OK     | IT-02 NIT con formato inválido → value for domain nit_sv violates check constraint \"nit_sv_check\"",
+    "OK     | IT-03 Contribuyente sin NRC → new row for relation \"cliente\" violates check constraint \"cliente_chec",
+    "OK     | IT-04 Stock negativo (sobreventa) → new row for relation \"producto\" violates check constraint \"producto_st",
+    "OK     | IT-05 Ajuste de Kardex sin justificación → new row for relation \"kardex\" violates check constraint \"kardex_check\"",
+    "OK     | IT-06 Modificar un movimiento de Kardex → La tabla kardex es de solo inserción (registro inmutable)",
+    "OK     | IT-07 Eliminar un DTE → La tabla dte_2024 es de solo inserción (registro inmutable)",
+    "OK     | IT-08 DTE procesado sin sello de recepción → new row for relation \"dte_2026\" violates check constraint \"dte_encabez",
+    "OK     | IT-09 Número de control con formato inválido → new row for relation \"dte_2026\" violates check constraint \"dte_encabez",
+    "OK     | IT-10 Dos turnos abiertos para el mismo cajero → duplicate key value violates unique constraint \"ux_turno_abierto\"",
+    "OK     | IT-11 CCF sin cliente → new row for relation \"venta\" violates check constraint \"venta_check\"",
+    "OK     | IT-12 Contingencia tipo 5 sin motivo → new row for relation \"evento_contingencia\" violates check constraint \"",
+    "OK     | IT-13 Permiso de escritura sin lectura → new row for relation \"permiso\" violates check constraint \"permiso_chec",
+    "OK     | IT-14 Correo de usuario duplicado (mayúsculas) → duplicate key value violates unique constraint \"ux_usuario_correo\"",
+    "OK     | IT-15 Rol de reportes lee hashes de contraseña → permission denied for table usuario",
+    "OK     | IT-16 Rol de la aplicación borra auditoría → permission denied for table auditoria",
+    "OK     | IT-17 Producto con código de barras duplicado → duplicate key value violates unique constraint \"producto_codigo_barras",
+    "OK     | IT-18 Dos eventos de contingencia activos a la vez → duplicate key value violates unique constraint \"ux_evento_activo\""
+  ],
+  "respaldo_s": 2.3,
+  "respaldo_tamano": "47.8M",
+  "restauracion_s": 2.4,
+  "restauracion_verificada": {
+    "original": "602800|301175626.88",
+    "restaurada": "602800|301175626.88",
+    "coincide": true
+  }
+}

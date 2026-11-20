@@ -1,0 +1,18 @@
+# Dependencias y compilados
+node_modules/
+dist/
+target/
+*.log
+!evidencias/*.log
+evidencias/junit.log
+.DS_Store
+
+# Documentos del grupo (no se publican)
+docs/
+entregables/
+herramientas/
+
+# Locales
+.env
+.env.*
+daash-erp/e2e/resultados.json

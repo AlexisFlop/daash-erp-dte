@@ -1,0 +1,36 @@
+# Despliegue en Render (Blueprint): base de datos PostgreSQL 16 + servicio web con API y frontend
+services:
+  - type: web
+    name: daash-erp
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DB_HOST
+        fromDatabase: { name: daash-db, property: host }
+      - key: DB_PORT
+        fromDatabase: { name: daash-db, property: port }
+      - key: DB_NAME
+        fromDatabase: { name: daash-db, property: database }
+      - key: DB_USER
+        fromDatabase: { name: daash-db, property: user }
+      - key: DB_PASSWORD
+        fromDatabase: { name: daash-db, property: password }
+      - key: DB_OWNER
+        fromDatabase: { name: daash-db, property: user }
+      - key: DB_OWNER_PASSWORD
+        fromDatabase: { name: daash-db, property: password }
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_APP_PASSWORD
+        generateValue: true
+
+databases:
+  - name: daash-db
+    plan: free
+    region: oregon
+    databaseName: daash
+    postgresMajorVersion: "16"

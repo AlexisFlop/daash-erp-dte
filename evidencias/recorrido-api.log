@@ -1,0 +1,36 @@
+PASA  API-01 Cajero no puede listar usuarios (403)
+PASA  API-02 Cajero sí puede consultar el catálogo para el POS
+PASA  API-03 Petición sin token es rechazada (401)
+PASA  API-04 Venta sin turno abierto es rechazada · No hay una caja abierta para este usuario (RF-09)
+PASA  API-05 Apertura de turno
+PASA  API-06 Segundo turno abierto es rechazado
+PASA  API-07 Factura procesada con sello de 40 caracteres · DTE-01-M001P001-000000000000181 · 1050 ms
+PASA  API-08 El precio enviado por el cliente se ignora (CA-05) · 1378.58
+PASA  API-09 JSON fe-fc-v1 con IVA por ítem y total en letras · MIL TRESCIENTOS SETENTA Y OCHO 58/100 USD
+PASA  API-10 Firma JWS RS512 de tres segmentos
+PASA  API-11 Stock descontado y Kardex registrado (RF-07)
+PASA  API-12 Cambio calculado en el servidor · 21.42
+PASA  API-13 Descuento del 15 % sin autorización es rechazado
+PASA  API-14 Descuento autorizado con credenciales de gerente
+PASA  API-15 Venta mayor al stock es rechazada
+PASA  API-16 CCF sin receptor es rechazado
+PASA  API-17 CCF procesado con tributo 20 · DTE-03-M001P001-000000000000052
+PASA  API-18 Nota de crédito procesada y relacionada al CCF
+PASA  API-19 Devolver más de lo vendido es rechazado
+PASA  API-20 Invalidar CCF con NC vigente es rechazado
+PASA  API-21 Cajero no puede invalidar documentos (403)
+PASA  API-22 Invalidación de factura con sello del evento
+PASA  API-23 Cajero no puede cambiar el estado del MH (403)
+PASA  API-24 Venta en contingencia con modelo diferido
+PASA  API-25 Cron del servidor transmite evento y lote al restablecer · 6 s
+PASA  API-26 DTE de contingencia recibe sello
+PASA  API-27 Corte Z excluye documentos invalidados · 3 transacciones · diferencia 1360.46
+PASA  API-28 Ajuste sin justificación suficiente es rechazado
+PASA  API-29 Ajuste justificado queda en Kardex
+PASA  API-30 Compra aumenta stock y recalcula costo promedio
+PASA  API-31 Comprobante de compra duplicado es rechazado
+PASA  API-32 DUI con dígito verificador erróneo es rechazado · ['DUI inválido (formato 00000000-0 y dígito verificador)']
+PASA  API-33 Texto con HTML se almacena como dato, no se ejecuta (CA-03)
+PASA  API-34 Inyección SQL en el login es rechazada (CA-01) · Credenciales incorrectas
+
+34/34 casos aprobados
